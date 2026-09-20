@@ -162,6 +162,11 @@ final class FlowyModel: ObservableObject {
             mucNhac: settings.mucNhac.rawValue), quanTrong: quanTrong)
     }
 
+    private func guiLenh(_ lenh: String, _ noiDung: String? = nil) {
+        lenhChoGui = (lenh, noiDung)
+        guiNgay()
+    }
+
     private func layVaXoa<T>(_ x: inout T?) -> T? { defer { x = nil }; return x }
     private func layVaXoa(_ x: inout Bool) -> Bool { defer { x = false }; return x }
 
